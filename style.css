@@ -1,0 +1,156 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header img {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .cta-buttons a {
+      background: #28a745;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta-buttons a:hover {
+      background: #218838;
+    }
+
+    .cta-buttons a.secondary {
+      background: #007bff;
+    }
+
+    .cta-buttons a.secondary:hover {
+      background: #0056b3;
+    }
+
+    section {
+      padding: 2rem 10%;
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 0.5rem;
+    }
+
+    .mission-vision {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .mission-vision div {
+      flex: 1;
+      min-width: 250px;
+      background: #e6f2ff;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .values div {
+      background: #f1f9f1;
+      border: 1px solid #cce0cc;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .why-us, .impact {
+      background: #f8f8f8;
+      border-left: 5px solid #003366;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+
+    /* Contact form */
+    .contact {
+      background: #e6f2ff;
+      padding: 2rem 10%;
+      border-top: 5px solid #003366;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact input, .contact textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact button {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  
