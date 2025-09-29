@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Miraceuticals Enterprise</title>
- <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    
     <img src="Logo.jpg" alt="Miraceuticals Logo">
     <h1>Miraceuticals Enterprise</h1>
     <p>Safe Medicines for Every Nigerian Home</p>
@@ -19,6 +18,16 @@
       <a href="report.html" class="secondary">Report Side Effects</a>
       <a href="#contact">Contact Us</a>
     </div>
+
+    <!-- Owner contact card -->
+    <div class="owner-card" aria-label="Owner contact">
+      <div class="owner-name">Miracle Ojedayo</div>
+      <div class="owner-phone"><a href="tel:+2347064319523">+234 706 431 9523</a></div>
+      <div class="owner-email"><a href="mailto:miraceutical@gmail.com">miraceutical@gmail.com</a></div>
+    </div>
+
+    <!-- small admin link (optional) -->
+    
   </header>
 
   <section>
@@ -43,7 +52,6 @@
     <ul>
       <li><strong>Medicine Distribution:</strong> We partner with licensed pharmacies to supply only authentic, quality medicines.</li>
       <li><strong>Fast Delivery:</strong> Through trusted courier services, we ensure medicines reach patients quickly and safely.</li>
-      <li><strong>Drug Safety Reporting:</strong> We are digitizing Nigeria’s Adverse Drug Reaction reporting process (NAFDAC Yellow Form).</li>
       <li><strong>Patient Feedback:</strong> Our system allows patients to share experiences and improve healthcare accountability.</li>
     </ul>
   </section>
@@ -82,19 +90,49 @@
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+ 
+  <!-- shared form collection script (used by contact, order, report pages) -->
+  <script src="forms.js"></script>
 
+  <section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" id="contactName" placeholder="Your Name" required>
+    <input type="email" id="contactEmail" placeholder="Your Email" required>
+    <textarea id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
   <footer>
-    <p>&copy; 2025 Miraceuticals Enterprise. All rights reserved.</p>
-  </footer>
+  <div class="owner-card">
+    <h3>Miracle Ojedayo</h3>
+    <p><strong>Phone:</strong> +2347064319523</p>
+    <p><strong>Email:</strong> <a href="mailto:miraceutical@gmail.com">miraceutical@gmail.com</a></p>
+  </div>
+
+  <p>&copy; 2025 Miraceuticals Enterprise. All rights reserved.</p>
+
+  <div class="admin-link">
+    <a href="admin.html" class="admin-btn">Admin</a>
+  </div>
+</footer>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let entries = JSON.parse(localStorage.getItem("contactEntries")) || [];
+    entries.push({
+      name: document.getElementById("contactName").value,
+      email: document.getElementById("contactEmail").value,
+      message: document.getElementById("contactMessage").value,
+      date: new Date().toLocaleString()
+    });
+
+    localStorage.setItem("contactEntries", JSON.stringify(entries));
+    alert("Message submitted successfully!");
+    this.reset();
+  });
+</script>
 
 </body>
 </html>
